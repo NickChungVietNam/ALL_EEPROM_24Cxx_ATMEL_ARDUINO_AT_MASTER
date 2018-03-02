@@ -1,6 +1,7 @@
 //https://github.com/NickChungVietNam/ALL_EEPROM_24Cxx_ATMEL_ARDUINO_AT_MASTER
 //http://arduino.vn/tutorial/1370-huong-dan-su-dung-ic-eeprom-24cxx-cua-atmel-va-thu-vien
 //http://arduino.vn/tutorial/1371-bai-2-su-dung-nhieu-ic-eeprom-24cxx-cung-luc
+
 #include <Wire.h>
 #include <Eeprom24Cxx.h>
 #define type_ic 4
@@ -15,7 +16,7 @@ unsigned long c=4000000000; //4 tỷ
         eeprom.write_1_byte(0, a);
         eeprom.write_2_byte(10, b);
         eeprom.write_4_byte(40, c);
-
+// goto save_any_thing.ino example to save float, double ... data type
 Serial.println(eeprom.read_1_byte(0));
 Serial.println(eeprom.read_2_byte(10));
 Serial.println(eeprom.read_4_byte(40));
