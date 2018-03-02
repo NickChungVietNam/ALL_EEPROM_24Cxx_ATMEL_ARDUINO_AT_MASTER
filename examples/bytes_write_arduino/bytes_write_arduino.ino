@@ -12,7 +12,7 @@ unsigned long c=4000000000; //4 tỷ
         AVR_EEPROM.write_1_byte(0, a);
         AVR_EEPROM.write_2_byte(10, b);
         AVR_EEPROM.write_4_byte(40, c);
-
+// goto save_any_thing.ino example to save float, double ... data type
 Serial.println(AVR_EEPROM.read_1_byte(0));
 Serial.println(AVR_EEPROM.read_2_byte(10));
 Serial.println(AVR_EEPROM.read_4_byte(40));
