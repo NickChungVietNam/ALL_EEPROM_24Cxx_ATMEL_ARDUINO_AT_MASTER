@@ -180,7 +180,7 @@ void Eeprom24C::write_2_byte( unsigned int address, uint16_t data){
  uint16_t doc_cao_8, doc_thap_8;
 doc_cao_8=read_1_byte(address);
 doc_thap_8=read_1_byte(address+1);
-uint16_t doc_data;
+uint16_t doc_data=0;
 doc_data=(doc_cao_8<<8);
   return (doc_data|doc_thap_8);
   }
@@ -226,7 +226,7 @@ doc_bit_thu[0]=(tam_bit_thu[0]<<0);*/
 /*
 uint32_t doc_data=(doc_bit_thu[3]|( doc_bit_thu[2]|(doc_bit_thu[1]|doc_bit_thu[0])));
 */
-uint32_t doc_data;
+uint32_t doc_data=0;
 for( byte i=0; i<4; i++){
     doc_data=doc_data|doc_bit_thu[i];
 }
@@ -263,7 +263,7 @@ doc_bit_thu[2]=(tam_bit_thu[2]<<16);
 doc_bit_thu[1]=(tam_bit_thu[1]<<8);
 doc_bit_thu[0]=(tam_bit_thu[0]<<0);*/
 
-uint64_t doc_data;
+uint64_t doc_data=0;
 /*(..........doc_bit_thu[3]|( doc_bit_thu[2]|(doc_bit_thu[1]|doc_bit_thu[0])));*/
 for( byte i=0; i<8; i++){
     doc_data=doc_data|doc_bit_thu[i];
